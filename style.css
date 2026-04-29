@@ -1,49 +1,105 @@
+/* RESET BÁSICO */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* FUNDO */
 body {
-  font-family: Arial;
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+  background: #f5f7fb;
+  color: #2c3e50;
   text-align: center;
+  padding: 20px;
 }
 
-#venn {
-  width: 450px;
-  height: 380px;
-  margin: auto;
-  position: relative;
+/* TÍTULO */
+h2 {
+  margin-bottom: 15px;
+  font-size: 26px;
+  font-weight: 600;
 }
 
+/* CONTAINER */
+.container {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  width: fit-content;
+  margin: 0 auto 20px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+/* INPUTS */
 input {
-  width: 70px;
-  margin: 3px;
-}
-
-.label-input {
-  width: 90px;
-}
-
-#info {
-  margin-top: 15px;
-  font-size: 18px;
-}
-
-svg {
-  overflow: visible;
-}
-
-.arrow {
-  stroke: black;
-  stroke-width: 1.5;
-  marker-end: url(#arrowhead);
-}
-
-.custom-label {
+  width: 65px;
+  padding: 6px;
+  margin: 4px;
+  border-radius: 6px;
+  border: 1px solid #dcdfe6;
+  text-align: center;
   font-size: 14px;
-  font-weight: bold;
-}
-
-.venn-area path {
-  cursor: pointer;
   transition: 0.2s;
 }
 
-.venn-area:hover path {
-  fill-opacity: 0.8 !important;
+input:focus {
+  border-color: #4c78a8;
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(76, 120, 168, 0.15);
+}
+
+/* BOTÃO */
+button {
+  margin-top: 10px;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #4c78a8, #5fa8d3);
+  color: white;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.2s ease;
+  box-shadow: 0 4px 10px rgba(76,120,168,0.3);
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(76,120,168,0.4);
+}
+
+button:active {
+  transform: scale(0.97);
+}
+
+/* DIAGRAMA */
+#venn {
+  margin: 20px auto;
+}
+
+/* TEXTO DE INFO */
+#info {
+  margin-top: 15px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #34495e;
+}
+
+/* LABELS DO SVG */
+.set-label {
+  pointer-events: none;
+}
+
+/* SETAS */
+.arrow {
+  stroke: #333;
+  stroke-width: 2;
+}
+
+/* LABEL DAS SETAS */
+.custom-label {
+  font-size: 15px;
+  font-weight: 600;
+  fill: #222;
 }
