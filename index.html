@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <title>Venn Interativo</title>
 
-  <!-- Bibliotecas -->
+  <!-- D3 -->
   <script src="https://d3js.org/d3.v7.min.js"></script>
 
   <!-- CSS -->
@@ -18,7 +18,7 @@
   <!-- SIDEBAR -->
   <div class="sidebar">
     <h1>Venn Dashboard</h1>
-    <p>Visualização interativa de conjuntos</p>
+    <p>Visualização interativa</p>
   </div>
 
   <!-- MAIN -->
@@ -34,39 +34,40 @@
       <div class="card">
         <h3>Configuração</h3>
 
+        <!-- LABELS -->
         <div class="input-group">
-          <label>A</label>
-          <input id="A" value="10">
+          <label>Label A</label>
+          <input id="labelA" value="A">
         </div>
 
         <div class="input-group">
-          <label>B</label>
-          <input id="B" value="20">
+          <label>Label B</label>
+          <input id="labelB" value="B">
         </div>
 
         <div class="input-group">
-          <label>C</label>
-          <input id="C" value="15">
+          <label>Label C</label>
+          <input id="labelC" value="C">
         </div>
 
         <div class="input-group">
           <label>A ∩ B</label>
-          <input id="AB" value="5">
+          <input id="labelAB" value="A∩B">
         </div>
 
         <div class="input-group">
           <label>A ∩ C</label>
-          <input id="AC" value="3">
+          <input id="labelAC" value="A∩C">
         </div>
 
         <div class="input-group">
           <label>B ∩ C</label>
-          <input id="BC" value="4">
+          <input id="labelBC" value="B∩C">
         </div>
 
         <div class="input-group">
           <label>A ∩ B ∩ C</label>
-          <input id="ABC" value="2">
+          <input id="labelABC" value="A∩B∩C">
         </div>
 
         <button onclick="render()">Atualizar</button>
@@ -83,8 +84,13 @@
   </div>
 </div>
 
-<!-- JS -->
+<!-- SCRIPT -->
 <script src="script.js"></script>
+
+<!-- render inicial -->
+<script>
+  render();
+</script>
 
 </body>
 </html>

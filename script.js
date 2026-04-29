@@ -1,5 +1,5 @@
 function getLabel(id) {
-  return document.getElementById(id).value;
+  return document.getElementById(id)?.value || "";
 }
 
 function render() {
