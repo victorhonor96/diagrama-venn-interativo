@@ -14,18 +14,61 @@
 
 <body>
 
-<h2>Venn Interativo (Custom Labels)</h2>
-<div class="container">
-<div>
-  <!-- Labels -->
-  A: <input class="label-input" id="labelA" value="A">
-  B: <input class="label-input" id="labelB" value="B">
-  C: <input class="label-input" id="labelC" value="C"><br>
+<div class="app">
 
-  AC: <input class="label-input" id="labelAB" value="A∩C">
-  AB: <input class="label-input" id="labelAC" value="A∩B">
-  BC: <input class="label-input" id="labelBC" value="B∩C">
-  ABC: <input class="label-input" id="labelABC" value="A∩B∩C"><br><br>
+  <!-- SIDEBAR -->
+  <div class="sidebar">
+    <h1>Venn Dashboard</h1>
+    <p>Visualização interativa de conjuntos</p>
+  </div>
+
+  <!-- MAIN -->
+  <div class="main">
+
+    <div class="header">
+      <h2>Diagrama de Venn</h2>
+    </div>
+
+    <div class="grid">
+
+      <!-- CONFIG -->
+      <div class="card">
+        <h3>Configuração</h3>
+
+        <div class="input-group">
+          <label>A</label>
+          <input id="A" value="10">
+        </div>
+
+        <div class="input-group">
+          <label>B</label>
+          <input id="B" value="20">
+        </div>
+
+        <div class="input-group">
+          <label>C</label>
+          <input id="C" value="15">
+        </div>
+
+        <div class="input-group">
+          <label>A ∩ B</label>
+          <input id="AB" value="5">
+        </div>
+
+        <div class="input-group">
+          <label>A ∩ C</label>
+          <input id="AC" value="3">
+        </div>
+
+        <div class="input-group">
+          <label>B ∩ C</label>
+          <input id="BC" value="4">
+        </div>
+
+        <div class="input-group">
+          <label>A ∩ B ∩ C</label>
+          <input id="ABC" value="2">
+        </div>
 
   <!-- Valores -->
   A: <input id="A" value="50">
@@ -36,8 +79,19 @@
   AC: <input id="AC" value="10">
   BC: <input id="BC" value="10">
   ABC: <input id="ABC" value="5"><br>
-</div>
-  <button onclick="render()">Atualizar</button>
+
+        <button onclick="render()">Atualizar</button>
+      </div>
+
+      <!-- GRÁFICO -->
+      <div class="card">
+        <h3>Visualização</h3>
+        <div id="venn"></div>
+        <div id="info">Clique em uma região</div>
+      </div>
+
+    </div>
+  </div>
 </div>
 
 <div id="venn"></div>
