@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Venn Interativo</title>
+
+  <!-- Bibliotecas -->
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/venn.js@0.2.20/venn.min.js"></script>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<h2>Venn Interativo (Custom Labels)</h2>
+
+<div>
+  <!-- Labels -->
+  A: <input class="label-input" id="labelA" value="A">
+  B: <input class="label-input" id="labelB" value="B">
+  C: <input class="label-input" id="labelC" value="C"><br>
+
+  AB: <input class="label-input" id="labelAB" value="A∩B">
+  AC: <input class="label-input" id="labelAC" value="A∩C">
+  BC: <input class="label-input" id="labelBC" value="B∩C">
+  ABC: <input class="label-input" id="labelABC" value="A∩B∩C"><br><br>
+
+  <!-- Valores -->
+  A: <input id="A" value="50">
+  B: <input id="B" value="50">
+  C: <input id="C" value="50"><br>
+
+  AB: <input id="AB" value="10">
+  AC: <input id="AC" value="10">
+  BC: <input id="BC" value="10">
+  ABC: <input id="ABC" value="5"><br>
+
+  <button onclick="render()">Atualizar</button>
+</div>
+
+<div id="venn"></div>
+
+<!-- JS -->
+<script src="script.js"></script>
+
+</body>
+</html>

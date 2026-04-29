@@ -1,0 +1,49 @@
+body {
+  font-family: Arial;
+  text-align: center;
+}
+
+#venn {
+  width: 450px;
+  height: 380px;
+  margin: auto;
+  position: relative;
+}
+
+input {
+  width: 70px;
+  margin: 3px;
+}
+
+.label-input {
+  width: 90px;
+}
+
+#info {
+  margin-top: 15px;
+  font-size: 18px;
+}
+
+svg {
+  overflow: visible;
+}
+
+.arrow {
+  stroke: black;
+  stroke-width: 1.5;
+  marker-end: url(#arrowhead);
+}
+
+.custom-label {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.venn-area path {
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.venn-area:hover path {
+  fill-opacity: 0.8 !important;
+}
