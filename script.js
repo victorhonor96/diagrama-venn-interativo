@@ -2,6 +2,12 @@ function getLabel(id) {
   return document.getElementById(id)?.value || "";
 }
 
+function setStatus(text) {
+  document.getElementById("status").innerText = text;
+}
+
+
+
 function render() {
   const width = 450;
   const height = 380;

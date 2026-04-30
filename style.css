@@ -1,44 +1,15 @@
-/* RESET */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 /* BASE */
 body {
   font-family: "Inter", "Segoe UI", Arial, sans-serif;
   background: #f4f6fb;
   color: #1f2937;
-}
-
-/* LAYOUT */
-.app {
-  display: grid;
-  grid-template-columns: 220px 1fr;
-  min-height: 100vh;
-}
-
-/* SIDEBAR */
-.sidebar {
-  background: #111827;
-  color: white;
   padding: 20px;
-}
-
-.sidebar h1 {
-  font-size: 18px;
-  margin-bottom: 20px;
-}
-
-.sidebar p {
-  font-size: 13px;
-  opacity: 0.7;
 }
 
 /* MAIN */
 .main {
-  padding: 25px;
+  max-width: 900px;
+  margin: auto;
 }
 
 /* HEADER */
@@ -55,7 +26,7 @@ body {
 }
 
 /* BOTÃO */
-.header button {
+button {
   padding: 8px 16px;
   border: none;
   border-radius: 8px;
@@ -63,52 +34,43 @@ body {
   color: white;
   font-weight: 600;
   cursor: pointer;
-  transition: 0.2s;
-}
-
-.header button:hover {
-  transform: translateY(-2px);
 }
 
 /* CONTROLES */
 .controls {
   display: flex;
   flex-wrap: wrap;
-  gap: 15px;
+  gap: 12px;
   margin-bottom: 20px;
 }
 
 .group {
   background: white;
-  padding: 12px;
+  padding: 10px;
   border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
   display: flex;
-  gap: 8px;
+  gap: 6px;
   align-items: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
 }
 
 .group span {
-  font-size: 13px;
+  font-size: 12px;
   color: #6b7280;
-  margin-right: 6px;
 }
 
-/* INPUTS */
-.group input {
-  width: 65px;
-  padding: 6px;
+/* INPUT */
+input {
+  width: 60px;
+  padding: 5px;
   border-radius: 6px;
   border: 1px solid #ddd;
   text-align: center;
-  font-size: 14px;
-  transition: 0.2s;
 }
 
-.group input:focus {
+input:focus {
   border-color: #4c78a8;
   outline: none;
-  box-shadow: 0 0 0 2px rgba(76,120,168,0.15);
 }
 
 /* GRÁFICO */
@@ -116,51 +78,15 @@ body {
   background: white;
   border-radius: 14px;
   padding: 20px;
+  text-align: center;
   box-shadow: 0 6px 20px rgba(0,0,0,0.06);
+}
+
+/* STATUS */
+#status {
+  margin-top: 12px;
+  font-size: 14px;
+  color: #6b7280;
   text-align: center;
 }
 
-#venn {
-  margin: 10px auto;
-}
-
-#info {
-  margin-top: 10px;
-  font-size: 14px;
-  color: #374151;
-}
-
-/* SVG */
-.set-label {
-  pointer-events: none;
-}
-
-.custom-label {
-  font-size: 14px;
-  font-weight: 600;
-  fill: #111;
-}
-
-/* RESPONSIVO */
-@media (max-width: 900px) {
-  .app {
-    grid-template-columns: 1fr;
-  }
-
-  .sidebar {
-    display: none;
-  }
-
-  .controls {
-    flex-direction: column;
-  }
-
-  .group {
-    width: 100%;
-    justify-content: space-between;
-  }
-
-  .group input {
-    flex: 1;
-  }
-}
