@@ -88,11 +88,11 @@ function arrow(x1, y1, x2, y2, label, options = {}) {
     .text(label);
 }
 
-arrow(100, 140, 180, 180, getLabel("labelAB"));
+arrow(100, 140, 180, 180, getLabel("labelAC"));
 arrow(350, 100, 250, 180, getLabel("labelBC"));
 arrow(300, 60,  225, 210, getLabel("labelABC"));
 
-arrow(140, 310, 225, 235, getLabel("labelAC"), {
+arrow(140, 310, 225, 235, getLabel("labelAB"), {
   labelAtEnd: true,
   offsetX: -100,
   offsetY: 95
