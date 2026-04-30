@@ -16,75 +16,50 @@
 <div class="app">
 
   <!-- SIDEBAR -->
-  <div class="sidebar">
+  <aside class="sidebar">
     <h1>Venn Dashboard</h1>
     <p>Visualização interativa</p>
-  </div>
+  </aside>
 
   <!-- MAIN -->
-  <div class="main">
+  <main class="main">
 
+    <!-- HEADER -->
     <div class="header">
       <h2>Diagrama de Venn</h2>
+      <button onclick="render()">Atualizar</button>
     </div>
 
-    <div class="grid">
+    <!-- CONTROLES -->
+    <div class="controls">
 
-      <!-- CONFIG -->
-      <div class="card">
-        <h3>Configuração</h3>
-
-        <!-- LABELS -->
-        <div class="input-group">
-          <label>Label A</label>
-          <input id="labelA" value="A">
-        </div>
-
-        <div class="input-group">
-          <label>Label B</label>
-          <input id="labelB" value="B">
-        </div>
-
-        <div class="input-group">
-          <label>Label C</label>
-          <input id="labelC" value="C">
-        </div>
-
-        <div class="input-group">
-          <label>A ∩ B</label>
-          <input id="labelAB" value="A∩B">
-        </div>
-
-        <div class="input-group">
-          <label>A ∩ C</label>
-          <input id="labelAC" value="A∩C">
-        </div>
-
-        <div class="input-group">
-          <label>B ∩ C</label>
-          <input id="labelBC" value="B∩C">
-        </div>
-
-        <div class="input-group">
-          <label>A ∩ B ∩ C</label>
-          <input id="labelABC" value="A∩B∩C">
-        </div>
-
-        <button onclick="render()">Atualizar</button>
+      <div class="group">
+        <span>Conjuntos</span>
+        <input id="labelA" value="A">
+        <input id="labelB" value="B">
+        <input id="labelC" value="C">
       </div>
 
-      <!-- GRÁFICO -->
-      <div class="card">
-        <h3>Visualização</h3>
-        <div id="venn"></div>
-        <div id="info">Clique em uma região</div>
+      <div class="group">
+        <span>Interseções</span>
+        <input id="labelAB" value="A∩B">
+        <input id="labelAC" value="A∩C">
+        <input id="labelBC" value="B∩C">
+        <input id="labelABC" value="A∩B∩C">
       </div>
 
     </div>
-  </div>
+
+    <!-- GRÁFICO -->
+    <div class="venn-wrapper">
+      <div id="venn"></div>
+      <div id="info">Clique em uma região</div>
+    </div>
+
+  </main>
 </div>
 
-<!-- SCRIPT -->
+<!-- JS -->
 <script src="script.js"></script>
 
 <!-- render inicial -->
